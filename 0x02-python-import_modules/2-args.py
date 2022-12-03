@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-from sys import argv
+if __name__ == '__main__':
+    from sys import argv
 
-l = len(argv) - 1
+    lens = len(argv) - 1
 
-if l == 0:
-    print("{} arguments.".format(l))
-elif l > 0:
-    print("{} arguments.".format(l))
-    for i in range(1, (l + 1)):
-        print("{}: {}".format(i, argv[i]))
-
+    if lens == 0:
+        print("{} arguments.".format(lens))
+    elif lens > 0:
+        print("{} arguments.".format(lens))
+        for i in range(1, (lens + 1)):
+            print("{}: {}".format(i, argv[i]))
