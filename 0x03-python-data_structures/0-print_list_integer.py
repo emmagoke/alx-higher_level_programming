@@ -2,7 +2,7 @@
 def int_to_str(i):
     string = ''
     while True:
-        i , remainder = divmod(i, 10)
+        i, remainder = divmod(i, 10)
         string += chr(ord('0') + remainder)
         if i == 0:
             break
