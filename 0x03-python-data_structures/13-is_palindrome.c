@@ -32,6 +32,8 @@ int is_palindrome(listint_t **head)
 	listint_t *rev, *current;
 
 	rev = reverse_t(head);
+	print_listint(rev);
+	printf("----------\n");
 	current = *head;
 	if (*head == NULL)
 		return (1);
@@ -42,10 +44,12 @@ int is_palindrome(listint_t **head)
 			rev = rev->next;
 			current = current->next;
 		}
-		else
+		else if (current->n != rev->n)
 		{
 			return (0);
 		}
 	}
-	return (1);
+	if (current == NULL && rev == NULL)
+		return (1);
+	return (0);
 }
