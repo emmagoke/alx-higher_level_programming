@@ -42,8 +42,6 @@ int is_palindrome(listint_t **head)
 		}
 		else
 		{
-			free_listint(current);
-			free_listint(rev);
 			return (0);
 		}
 	}
