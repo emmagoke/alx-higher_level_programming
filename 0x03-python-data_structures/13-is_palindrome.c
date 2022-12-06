@@ -33,6 +33,8 @@ int is_palindrome(listint_t **head)
 
 	rev = reverse_t(head);
 	current = *head;
+	if (*head == NULL)
+		return (1);
 	while (current != NULL)
 	{
 		if (current->n == rev->n)
