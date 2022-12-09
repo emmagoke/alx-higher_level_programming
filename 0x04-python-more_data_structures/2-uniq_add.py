@@ -7,7 +7,7 @@ def uniq_add(my_list=[]):
     out = []
     sum_u = 0
     for i in my_list:
-        if i  not in out:
+        if i not in out:
             sum_u += i
             out.append(i)
     return sum_u
