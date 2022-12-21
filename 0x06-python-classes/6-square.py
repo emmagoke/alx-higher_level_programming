@@ -18,7 +18,7 @@ class Square():
         This creates an instance of the square class
         """
         self.size = size
-        self.__position = position
+        self.position = position
 
     @property
     def size(self):
@@ -51,11 +51,11 @@ class Square():
         """
         This method sets the value of 'position'
         """
-        if type(position) != tuple and len(position) != 2:
+        if type(value) != tuple or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        elif (position[0] < 0 and posititon[1] < 0):
+        elif (value[0] < 0 or value[1] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
-        elif type(position[0]) != int and type(position[1]) != int:
+        elif type(value[0]) != int or type(value[1]) != int:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
@@ -67,9 +67,11 @@ class Square():
         if self.size == 0:
             print()
         else:
+            for y in range(self.position[1]):
+                print("")
             for i in range(self.size):
-                for x in range(self.position[0]):
-                    print(' ', end='')
+                for y in range(self.position[0]):
+                    print(" ", end='')
                 for j in range(self.size):
                     print("#", end="")
                 print()
