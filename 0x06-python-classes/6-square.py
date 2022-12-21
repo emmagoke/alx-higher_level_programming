@@ -51,8 +51,11 @@ class Square():
         """
         This method sets the value of 'position'
         """
-        if type(position) != tuple and (position[0] < 0 and posititon[1] < 0) and \
-                (type(position[0]) != int and type(position[1]) != int):
+        if type(position) != tuple and len(position) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif (position[0] < 0 and posititon[1] < 0):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif type(position[0]) != int and type(position[1]) != int:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
