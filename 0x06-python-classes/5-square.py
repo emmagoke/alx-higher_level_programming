@@ -42,10 +42,13 @@ class Square():
         """
         This method prints in stdout the square with the character '#'
         """
-        for i in range(self.size):
-            for j in range(self.size):
-                print("#", end="")
-            print('')
+        if self.size == 0:
+            print()
+        else:
+            for i in range(self.size):
+                for j in range(self.size):
+                    print("#", end="")
+                print()
 
     def area(self):
         """
