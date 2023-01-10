@@ -1,0 +1,64 @@
+Using `` add_integer``
+----------------
+``add_integer()`` add two number together.
+
+::
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+It also works with floating-point values.
+
+::
+
+	>>> add_integer(1, 2)
+	3
+
+It also works with floating-point values.
+
+::
+
+	>>> add_integer(100, -2)
+	98
+
+It also works with floating-point values.
+
+::
+
+	>>> add_integer(2)
+	100
+
+It also works with floating-point values.
+
+::
+
+
+	>>> add_integer(100.3, -2)
+	98
+
+It also works with floating-point values.
+
+::
+
+	>>> add_integer(98.99, 3.44)
+	101
+
+
+Non-Number
+-----------
+------------
+``add_integer()`` also works for non-numbers.
+
+::
+
+	>>> add_integer(4, "School")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+It also works with floating-point values.
+
+::
+
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
