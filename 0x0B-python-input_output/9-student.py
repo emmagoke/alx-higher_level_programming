@@ -21,6 +21,6 @@ class Student:
     def to_json(self):
         """
         This method retrieves a dictionary representation
-        of a Student instance 
+        of a Student instance
         """
         return self.__dict__
