@@ -23,7 +23,7 @@ class Student:
         This method retrieves a dictionary representation
         of a Student instance
         """
-        if attrs == None:
+        if attrs is None:
             out = self.__dict__
         else:
             out = {}
