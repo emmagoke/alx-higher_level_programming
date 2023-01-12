@@ -1,7 +1,15 @@
 #!/usr/bin/python3
+"""
+This module contains add_integer function.
+"""
+
 
 def add_integer(a, b=98):
     """
+    This Function add to number together.
+    Arguments:
+        @a: The First integer.
+        @b: The Second Integer
     """
     if type(a) != int and type(a) != float:
         raise TypeError('a must be an integer')
