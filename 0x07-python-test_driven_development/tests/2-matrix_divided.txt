@@ -26,8 +26,14 @@ For normal matrix
 	>>> matrix_divided([[4, 2, 2]], 2)
 	[[2.0, 1.0, 1.0]]
 
-Division by 0
+Division by 0 and div must be a number
 -------------
+
+::
+
+	>>> matrix_divided(matrix, "str")
+	Traceback (most recent call last):
+	TypeError: div must be a number
 
 ::
 

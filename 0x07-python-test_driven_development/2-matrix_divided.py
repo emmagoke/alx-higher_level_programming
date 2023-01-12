@@ -6,6 +6,10 @@ This module contains matrix_divided function
 
 def matrix_divided(matrix, div):
     """
+    This function compute the dividend of a matrix
+    Args:
+        @matrix: The matrix
+        @div: The divisor
     """
     len_mat = len(matrix) # number of rows
     for row in matrix:
