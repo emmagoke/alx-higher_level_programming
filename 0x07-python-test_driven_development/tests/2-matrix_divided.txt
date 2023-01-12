@@ -26,6 +26,29 @@ For normal matrix
 	>>> matrix_divided([[4, 2, 2]], 2)
 	[[2.0, 1.0, 1.0]]
 
+Division by Infinity
+-------------------
+
+::
+
+	>>> matrix_divided(matrix, float('inf'))
+	[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+Argument Not Provided
+--------------------
+
+::
+
+	>>> matrix_divided(matrix)
+	Traceback (most recent call last):
+	TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+::
+
+	>>> matrix_divided()
+	Traceback (most recent call last):
+	TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
 Division by 0 and div must be a number
 -------------
 
