@@ -11,13 +11,15 @@ def matrix_divided(matrix, div):
         @matrix: The matrix
         @div: The divisor
     """
-    len_mat = len(matrix) # number of rows
+    len_mat = len(matrix)  # number of rows
     for row in matrix:
         if type(row) != list:
-            raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+            raise TypeError('matrix must be a matrix (list of lists) of \
+integers/floats')
         for col in row:
             if type(col) not in [float, int]:
-                raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+                raise TypeError('matrix must be a matrix (list of lists) \
+of integers/floats')
     for i in range(len_mat - 1):
         if len(matrix[i]) != len(matrix[i + 1]):
             raise TypeError('Each row of the matrix must have the same size')
