@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module contains 
+This module contains print_square function.
 """
 
 
