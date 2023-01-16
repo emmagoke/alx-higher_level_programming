@@ -16,7 +16,7 @@ def text_indentation(text):
 
     ind = 0
     for word in text:
-        if word in '.?:' or word  == '\n':
+        if word in '.?:' or word == '\n':
             print(word)
             print()
             ind += 1
