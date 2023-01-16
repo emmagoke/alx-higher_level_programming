@@ -29,3 +29,25 @@ class TestMaxInteger(unittest.TestCase):
         """
         self.assertEqual(max_integer([3]), 3)
 
+    def test_max_end(self):
+        """
+        Testing for maximum number at the end of the list.
+        """
+        self.assertEqual(max_integer(list_test[:4]), 12)
+
+    def test_max_at_beginning(self):
+        """
+        Testing when the maximum number is at the beginning.
+        """
+        self.assertEqual(max_integer([19, 1, 4, 6]), 19)
+
+    def test_one_negative_number(self):
+        """One nea=gative number in the list
+        """
+        self.assertEqual(max_integer([10, -5, 8, 16, 11]), 16)
+
+    def test_all_negative_number(self):
+        """All the list are negative number
+        """
+        self.assertEqual(max_integer([-1, -4, -7, -10]), -1)
+
