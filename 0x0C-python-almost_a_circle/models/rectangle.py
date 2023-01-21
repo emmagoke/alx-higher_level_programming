@@ -39,7 +39,7 @@ class Rectangle(Base):
         This method sets the width private attribute.
         """
         self.__width = width
-    
+
     @property
     def height(self):
         """
@@ -81,4 +81,3 @@ class Rectangle(Base):
         This method sets the y private attribute.
         """
         self.__y = y
-
