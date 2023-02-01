@@ -53,3 +53,48 @@ When one argument is provided
 	Traceback (most recent call last):
 	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
+When the `area` method is passed
+================================
+
+::
+
+	>>> bg.area()
+	Traceback (most recent call last):
+	Exception: area() is not implemented
+
+When list and tuple are passed as integer_validator()'s argument
+================================================================
+
+::
+
+	>>> bg.integer_validator("name", [4])
+	Traceback (most recent call last):
+	TypeError: name must be an integer
+
+::
+
+	>>> bg.integer_validator("name", (2, 4))
+	Traceback (most recent call last):
+	TypeError: name must be an integer
+
+When the value argument is a set or None or boolean
+===================================================
+
+::
+
+	>>> bg.integer_validator("age", {2, 4})
+	Traceback (most recent call last):
+	TypeError: age must be an integer
+
+::
+
+	>>> bg.integer_validator("value", None)
+	Traceback (most recent call last):
+	TypeError: value must be an integer
+
+::
+
+	>>> bg.integer_validator("name", True)
+	Traceback (most recent call last):
+	TypeError: name must be an integer
+
