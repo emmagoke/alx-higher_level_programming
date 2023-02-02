@@ -3,6 +3,8 @@
 This module contains the add_attribute function
 which checks if a class has the attribute
 """
+
+
 def add_attribute(cls, attr, value):
     """
     This function checks if attr is an attribute
