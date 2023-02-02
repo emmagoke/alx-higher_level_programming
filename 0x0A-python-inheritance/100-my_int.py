@@ -12,7 +12,7 @@ class MyInt(int):
 
     def __eq__(self, other):
         """
-        This method handle the equal to(==) in 
+        This method handle the equal to(==) in
         reverse other
         """
         return self.real != other
