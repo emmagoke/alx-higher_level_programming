@@ -12,6 +12,6 @@ def add_attribute(cls, attr, value):
         attr: attribute
         value: value
     """
-    if hasattr(cls, attr):
+    if not hasattr(cls, "__dict__"):
         raise TypeError("can't add new attribute")
     setattr(cls, attr, value)
