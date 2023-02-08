@@ -104,4 +104,3 @@ class Rectangle(Base):
         Rectagle instance
         """
         return self.width * self.height
-
