@@ -17,6 +17,7 @@ class TestBase(unittest.TestCase):
         """
         b1 = Base(10)
         b2 = Base(13)
+        self.assertTrue(hasattr(b1, "id"))
         self.assertEqual(b1.id, 10)
         self.assertEqual(b2.id, 13)
 
