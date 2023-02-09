@@ -18,7 +18,7 @@ class Square(Rectangle):
 
     def __init__(self, size, x=0, y=0, id=None):
         """
-        This method is called when the instance of the 
+        This method is called when the instance of the
         class square is created.
         """
         super().__init__(size, size, x, y, id)
