@@ -135,6 +135,14 @@ class Rectangle(Base):
         """
         return self.width * self.height
 
+    def to_dictionary(self):
+        """
+        returns the dictionary representation of a Rectangle
+        """
+        output = {'id': self.id, 'width':self.width, 'height':self.height,
+                'x': self.x, 'y': self.y}
+        return output
+
     def display(self):
         """
         This method prints in stdout the Rectangle instance
