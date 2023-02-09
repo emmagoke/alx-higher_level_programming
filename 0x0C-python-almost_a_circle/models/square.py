@@ -43,7 +43,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """
-        This method update the attributes (id, size, 
+        This method update the attributes (id, size,
         x, y) of the Square class.
         """
         len_args = len(args)
