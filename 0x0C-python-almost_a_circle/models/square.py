@@ -41,6 +41,20 @@ class Square(Rectangle):
             raise ValueError('width must be > 0')
         self.width, self.height = size, size
 
+    def update(self, *args, **kwargs):
+        """
+        This method update the attributes (id, size, 
+        x, y) of the Square class.
+        """
+        len_args = len(args)
+        if args is not None and len_args != 0:
+            list_id = ['id', 'size', 'x', 'y']
+            for i in range(len_args):
+                setattr(self, list_id[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
     def __str__(self):
         """
         This method returns the string representation
