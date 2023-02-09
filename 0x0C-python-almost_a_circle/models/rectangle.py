@@ -104,7 +104,7 @@ class Rectangle(Base):
         height, x, and y respectively
         """
         len_args = len(args)
-        if args is not None and len_args !=  0:
+        if args is not None and len_args != 0:
             list_id = ['id', 'width', 'height', 'x', 'y']
             for i in range(len_args):
                 setattr(self, list_id[i], args[i])
