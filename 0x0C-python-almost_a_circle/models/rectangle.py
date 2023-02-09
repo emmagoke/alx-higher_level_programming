@@ -98,12 +98,18 @@ class Rectangle(Base):
             raise ValueError('y must be >= 0')
         self.__y = y
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         This method update the values id, width,
         height, x, and y respectively
         """
-        if len(args) == 1:
+        if len(args) == 0:
+            self.id = kwargs.get("id", self.id)
+            self.width = kwargs.get("width", self.width)
+            self.height = kwargs.get('height', self.height)
+            self.x = kwargs.get('x', self.x)
+            self.y = kwargs.get('y', self.y)
+        elif len(args) == 1:
             self.id = args[0]
         elif len(args) == 2:
             self.id, self.width = args
