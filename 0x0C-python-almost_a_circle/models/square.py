@@ -1,4 +1,4 @@
-#!/usr/binpython3
+#!/usr/bin/python3
 """
 This Module contains the python class Square
 that inherits from the Rectangle class
