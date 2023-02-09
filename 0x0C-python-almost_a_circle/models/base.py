@@ -39,12 +39,10 @@ class Base:
         list_objs to a file.
         """
         output = []
-        name = ''
+        name = cls.__name__
         if list_objs is None:
-            output = None
-            name = self.__class__.__name__
+            output = []
         else:
-            name = list_objs[0].__class__.__name__
             for obj in list_objs:
                 output.append(obj.to_dictionary())
         with open(name + '.json', mode='w', encoding='utf-8') as f:
