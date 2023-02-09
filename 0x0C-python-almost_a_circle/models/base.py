@@ -47,3 +47,13 @@ class Base:
                 output.append(obj.to_dictionary())
         with open(name + '.json', mode='w', encoding='utf-8') as f:
             f.write(cls.to_json_string(output))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        returns the list of the JSON string representation json_string
+        """
+        if json_string is None:
+            return []
+        else:
+            return json.loads(json_string)
