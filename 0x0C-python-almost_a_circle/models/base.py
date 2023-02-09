@@ -78,11 +78,11 @@ class Base:
         file_name = cls.__name__ + '.json'
         obj_list = []
         output = []
-        with open(file_name, mode='r', encoding='utf-8') as f:
-            try:
+        try:
+            with open(file_name, mode='r', encoding='utf-8') as f:
                 obj_list = cls.from_json_string(f.read())
-            except FileDoesNotExist:
-                return output
+        except FileNotFoundError:
+            return output
         for obj in obj_list:
             output.append(cls.create(**obj))
         return output
