@@ -63,6 +63,6 @@ class Base:
         """
         returns an instance with all attributes already set.
         """
-        obj = cls(1,1, 0)
+        obj = cls(1, 1)
         obj.update(**dictionary)
         return obj
