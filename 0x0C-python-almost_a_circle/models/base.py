@@ -42,7 +42,7 @@ class Base:
         name = ''
         if list_objs is None:
             output = None
-            name = cls.__class__.__name__
+            name = self.__class__.__name__
         else:
             name = list_objs[0].__class__.__name__
             for obj in list_objs:
