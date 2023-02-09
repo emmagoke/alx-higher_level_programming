@@ -103,22 +103,30 @@ class Rectangle(Base):
         This method update the values id, width,
         height, x, and y respectively
         """
-        if len(args) == 0:
-            self.id = kwargs.get("id", self.id)
-            self.width = kwargs.get("width", self.width)
-            self.height = kwargs.get('height', self.height)
-            self.x = kwargs.get('x', self.x)
-            self.y = kwargs.get('y', self.y)
-        elif len(args) == 1:
-            self.id = args[0]
-        elif len(args) == 2:
-            self.id, self.width = args
-        elif len(args) == 3:
-            self.id, self.width, self.height = args
-        elif len(args) == 4:
-            self.id, self.width, self.height, self.x = args
-        elif len(args) == 5:
-            self.id, self.width, self.height, self.x, self.y = args
+        len_args = len(args)
+        if args is not None and len_args !=  0:
+            list_id = ['id', 'width', 'height', 'x', 'y']
+            for i in range(len_args):
+                setattr(self, list_id[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+        #  if len(args) == 0:
+        #     self.id = kwargs.get("id", self.id)
+        #     self.width = kwargs.get("width", self.width)
+        #     self.height = kwargs.get('height', self.height)
+        #     self.x = kwargs.get('x', self.x)
+        #     self.y = kwargs.get('y', self.y)
+        #  elif len(args) == 1:
+        #     self.id = args[0]
+        #  elif len(args) == 2:
+        #     self.id, self.width = args
+        #  elif len(args) == 3:
+        #     self.id, self.width, self.height = args
+        #  elif len(args) == 4:
+        #     self.id, self.width, self.height, self.x = args
+        #  elif len(args) == 5:
+        #     self.id, self.width, self.height, self.x, self.y = args
 
     def area(self):
         """
