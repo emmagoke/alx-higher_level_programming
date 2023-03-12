@@ -18,3 +18,8 @@ print("--")
 
 my_square = Square(3, (1, -3))
 print(my_square.position)
+
+try:
+    my_square = Square(3, (1, "3"))
+except Exception as e:
+    print(e)
