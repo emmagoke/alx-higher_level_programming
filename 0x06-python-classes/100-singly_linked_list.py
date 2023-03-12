@@ -104,7 +104,7 @@ class SinglyLinkedList():
         temp = self.__head
         out = ""
         if temp is None:
-            return None
+            return out
         while temp.next_node is not None:
             out += str(temp.data)
             out += "\n"
