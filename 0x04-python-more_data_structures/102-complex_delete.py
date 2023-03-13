@@ -10,6 +10,6 @@ def complex_delete(a_dictionary, value):
         if val == value:
             key_.append(key)
     if key_:
-        for key in key_: 
+        for key in key_:
             del a_dictionary[key]
     return a_dictionary
