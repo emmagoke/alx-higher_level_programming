@@ -1,4 +1,4 @@
 #!/usr/bin/node
 
-
-globalThis.myVar = 333;
+myVar = 333;
+/* globalThis.myVar = 333; */
