@@ -6,9 +6,6 @@ const list = require('./100-main').list;
  * value of the initial list, multipled by the index
  * in the list.
  */
-const newarray = list.map((item, index) => {
-  return item * index;
-});
 
 console.log(list);
-console.log(newarray);
+console.log(list.map((item, index) => item * index));
