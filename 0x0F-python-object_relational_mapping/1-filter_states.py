@@ -20,7 +20,7 @@ if __name__ == '__main__':
 
     query = cur.fetchall()
     for row in query:
-        if row[1] != 'n':
+        if row[1][0] != 'n':
             print(row)
     cur.close()
     db.close()
