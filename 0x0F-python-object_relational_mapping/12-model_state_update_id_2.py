@@ -2,9 +2,9 @@
 """
 This python script changes the name of a State object from the
 database hbtn_0e_6_usa
-Usage : ./7-model_state_fetch_all.py <mysql username>
-                                     <mysql password>
-                                     <database name>
+Usage : ./12-model_state_update_id.py <mysql username>
+                                      <mysql password>
+                                      <database name>
 """
 import sys
 from sqlalchemy import create_engine
