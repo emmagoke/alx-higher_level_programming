@@ -4,7 +4,7 @@ This script contains the City class which inherit from the Base class.
 """
 from sqlalchemy import Column, Integer, String, ForeignKey
 #  from sqlalchemy.orm import relationship
-from model_state import State, Base
+from relationship_state import Base
 
 
 class City(Base):

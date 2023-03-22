@@ -23,7 +23,9 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    query = session.query(City).order_by(City.id).all()
-    for city in query:
-        print(f"{city.state.name}: ({city.id}) {city.name}")
+    #  query = session.query(City).order_by(City.id).all()
+    query = session.query(State, City).filter(State.id == City.state_id). \
+        order_by(City.id).all()
+    for state, city in query:
+        print(f"{state.name}: ({city.id}) {city.name}")
     session.close()
