@@ -3,4 +3,4 @@
 
 url=$1
 
-curl -sI -w ''%{size_header} "$url" | tail -1; echo ""
+curl -sI -w '%{size_header}' "$url" | tail -1; echo ""
