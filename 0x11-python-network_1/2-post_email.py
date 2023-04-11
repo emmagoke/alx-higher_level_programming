@@ -11,9 +11,9 @@ import urllib.parse
 if __name__ == '__main__':
     url = sys.argv[1]
     email = sys.argv[2]
-    email = urllib.parse.urlencode({"email":email})
+    email = urllib.parse.urlencode({"email": email})
     email = email.encode('ascii')
     request = urllib.request.Request(url, email)
     with urllib.request.urlopen(request) as res:
         mail = res.read()
-        print("Your email is: {}".format(mail.decode('utf-8')))
+        print("{}".format(mail.decode('utf-8')))
