@@ -11,4 +11,4 @@ if __name__ == '__main__':
     url = sys.argv[1]
     data = sys.argv[2]
     response = requests.post(url, data={'email': data})
-    print(r.content.decode('utf-8'))
+    print(response.content.decode('utf-8'))
