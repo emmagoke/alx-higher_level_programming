@@ -8,7 +8,7 @@ const apiUrl = process.argv[2];
 let jsonBody;
 let count = 0;
 let i;
-const character = 'https://swapi-api.alx-tools.com/api/people/18/';
+const characterId = '/18/';
 
 request(apiUrl, function (error, response, body) {
   if (error) {
@@ -16,9 +16,11 @@ request(apiUrl, function (error, response, body) {
   } else {
     jsonBody = JSON.parse(body);
     for (i = 0; i < jsonBody.results.length; i++) {
-      if (jsonBody.results[i].characters.includes(character)) {
+      for (const character of jsonBody.results[i].characters) {
         /* array.incudes checks if an element is in an array */
-        count++;
+        if (character.endsWith(characterId)) {
+          count++;
+        }
       }
     }
     console.log(count);
